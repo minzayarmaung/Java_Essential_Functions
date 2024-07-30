@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "LambdaUsage",
+            "request": "launch",
+            "mainClass": "LambdaUsage",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "checkValidNrc",
             "request": "launch",
             "mainClass": "checkValidNrc",
