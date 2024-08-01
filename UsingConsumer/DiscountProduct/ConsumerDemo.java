@@ -17,8 +17,28 @@ public class ConsumerDemo {
             products.setPrice(newPrice);
         };
 
-        // Without Using Lambda
+        /*
+         * // Without Using Lambda
+         * ObjDoubleConsumer<Product> updatedPriceList = new
+         * ObjDoubleConsumer<Product>() {
+         * 
+         * @Override
+         * public void accept(Product products, double percentage) {
+         * double newestPrice = products.price * 1 - (percentage / 100);
+         * products.setPrice(newestPrice);
+         * }
+         * };
+         * 
+         * for (Product product : Products) {
+         * priceDiscount.accept(product, 10);
+         * }
+         * 
+         * for (Product product : Products) {
+         * System.out.println(product);
+         * }
+         */
 
+        // Using Lambda
         Products.forEach(products -> priceDiscount.accept(products, 10));
 
         Products.forEach(System.out::println);
