@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ConsumerDemo",
+            "request": "launch",
+            "mainClass": "UsingConsumer.DiscountProduct.ConsumerDemo",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
+            "name": "ArrayList_Vs_Vector",
+            "request": "launch",
+            "mainClass": "ArrayList_Vs_Vector.ArrayList_Vs_Vector",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "LambdaUsage",
             "request": "launch",
             "mainClass": "LambdaUsage",
