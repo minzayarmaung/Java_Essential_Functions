@@ -2,6 +2,9 @@ package Instance_Vs_Static.BeginnerFriendlyExample;
 
 public class Cars {
 
+    // Links to Read
+    String link = "https://stackoverflow.com/questions/11993077/difference-between-static-methods-and-instance-methods";
+
     // Instance variable
     private String brand;
     // Static variable
