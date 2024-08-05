@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MathUtils",
+            "request": "launch",
+            "mainClass": "Instance_Vs_Static.DevelopersExample.MathUtils",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "Cars",
             "request": "launch",
             "mainClass": "Instance_Vs_Static.BeginnerFriendlyExample.Cars",
