@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Cars",
+            "request": "launch",
+            "mainClass": "Instance_Vs_Static.BeginnerFriendlyExample.Cars",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "ConsumerDemo",
             "request": "launch",
             "mainClass": "UsingConsumer.DiscountProduct.ConsumerDemo",
