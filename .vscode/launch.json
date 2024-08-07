@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "ArrayList_Vs_Vector.Test",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
+            "name": "MyanmarFontTranslator",
+            "request": "launch",
+            "mainClass": "Myanmar_Unicode_Translator.MyanmarFontTranslator",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "MathUtils",
             "request": "launch",
             "mainClass": "Instance_Vs_Static.DevelopersExample.MathUtils",
