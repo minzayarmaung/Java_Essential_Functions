@@ -15,6 +15,7 @@ public class calculateOTDurationOTPolicy {
         double otEnd = Double.parseDouble(OTendTime);
 
         if (start >= otStart && otEnd <= end) {
+            
 
         } else {
             return "0 hours";
@@ -23,7 +24,14 @@ public class calculateOTDurationOTPolicy {
         return "10 hours";
     }
 
-    public static String calculateOTforOffDays(double startTime, double endTime) {
+    public static String calculateOTforOffDays(String OTstartTime, String OTendTime, String assignStartTime,
+            String assignEndTime) {
+
+        double start = Double.parseDouble(assignStartTime);
+        double end = Double.parseDouble(assignEndTime);
+
+        double otStart = Double.parseDouble(OTstartTime);
+        double otEnd = Double.parseDouble(OTendTime);
 
         return "10 days";
     }

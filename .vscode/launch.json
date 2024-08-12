@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "UserInput",
+            "request": "launch",
+            "mainClass": "Encryption.UserInput",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "Test",
             "request": "launch",
             "mainClass": "ArrayList_Vs_Vector.Test",
