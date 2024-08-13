@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EncryptData",
+            "request": "launch",
+            "mainClass": "JavaNativeEncryption.EncryptData",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "UserInput",
             "request": "launch",
             "mainClass": "Encryption.UserInput",
