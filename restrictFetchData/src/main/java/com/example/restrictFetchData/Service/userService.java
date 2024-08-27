@@ -14,17 +14,14 @@ public class userService {
 
     @Autowired
     private UserRepository userRepository;
-
     int fetchCount = 0;
-
-    public List<User> getAllUsers() {
+    public Object getAllUsers() {
         fetchCount++;
         if (fetchCount <= 5) {
             return userRepository.findAll();
         } else {
-
+            return "You have Exceeded API Call Limit";
         }
-        return null;
     }
 
 }
