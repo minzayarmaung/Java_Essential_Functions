@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Zawgyi2UnicodeConverter",
+            "request": "launch",
+            "mainClass": "ZawgyiToUnicode.Zawgyi2UnicodeConverter",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "EncryptData",
             "request": "launch",
             "mainClass": "JavaNativeEncryption.EncryptData",
