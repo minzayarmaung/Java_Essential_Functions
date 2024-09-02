@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "AESAlgorithm_Encryption.Main",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "Zawgyi2UnicodeConverter",
             "request": "launch",
             "mainClass": "ZawgyiToUnicode.Zawgyi2UnicodeConverter",
