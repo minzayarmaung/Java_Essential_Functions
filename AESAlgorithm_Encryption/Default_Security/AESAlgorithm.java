@@ -1,4 +1,4 @@
-package AESAlgorithm_Encryption;
+package AESAlgorithm_Encryption.Default_Security;
 
 import java.security.spec.AlgorithmParameterSpec;
 import java.util.Base64;

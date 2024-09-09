@@ -1,48 +1,90 @@
 package AESAlgorithm_Encryption.BurmeseCharacters;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.nio.charset.StandardCharsets;
+import java.security.spec.AlgorithmParameterSpec;
 import java.util.Base64;
 import java.util.Scanner;
 
 import javax.crypto.Cipher;
+import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 public class AESAlgorithm {
-    public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Text :");
-        String text = sc.nextLine(); // Burmese text
-        String key = "1234567890123456"; // 16-byte key for AES
+    public static String KEY = "";
+    public static String IV = "";
 
-        System.out.println("Original Text: " + text);
+    public static boolean readAESKeys() {
+        boolean exist = false;
+        String[] keys = new String[2];
+        String filepath = "E:\\Development\\Java_Essential_Functions\\AESAlgorithm_Encryption\\BurmeseCharacters\\aesKeys";
 
-        // Encrypting the text
-        String encrypted = encrypt(text, key);
-        System.out.println("Encrypted Value: " + encrypted);
+        try (BufferedReader reader = new BufferedReader(new FileReader(filepath))) {
+            keys[0] = reader.readLine();
+            keys[1] = reader.readLine();
+            KEY = keys[0];
+            IV = keys[1];
 
-        // Decrypting the text
-        String decrypted = decrypt(encrypted, key);
-        System.out.println("Decrypted Value: " + decrypted);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (!KEY.isEmpty() && !IV.isEmpty()) {
+            exist = true;
+        }
+        return exist;
     }
 
-    public static String encrypt(String strToEncrypt, String secret) throws Exception {
-        SecretKeySpec secretKey = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "AES");
-        Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-        cipher.init(Cipher.ENCRYPT_MODE, secretKey);
-        return Base64.getEncoder().encodeToString(cipher.doFinal(strToEncrypt.getBytes(StandardCharsets.UTF_8)));
+    public static String encryptString(String value) {
+        boolean isExist = readAESKeys();
+
+        if (isExist) {
+
+            try {
+                // byte[] ivBytes = getHashByte(IV, "MD5");
+                // byte[] keyBytes = getHashByte(KEY, "SHA-256");
+                // byte[] keyBytes = getHashByte(KEY, "MD5");
+
+                byte[] ivBytes = IV.getBytes("UTF-8");
+                byte[] keyBytes = KEY.getBytes("UTF-8");
+
+                Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+                SecretKeySpec secretKeySpec = new SecretKeySpec(keyBytes, "AES");
+                AlgorithmParameterSpec paramSpec = new IvParameterSpec(ivBytes);
+                cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, paramSpec);
+                // return new String (cipher.doFinal(value.getBytes("UTF-8")));
+                return Base64.getEncoder().encodeToString(cipher.doFinal(value.getBytes("UTF-8")));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return "Error Encrypting Value";
     }
 
-    public static String decrypt(String strToDecrypt, String secret) throws Exception {
-        SecretKeySpec secretKey = new SecretKeySpec(secret.getBytes(StandardCharsets.UTF_8), "AES");
-        Cipher cipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
-        cipher.init(Cipher.DECRYPT_MODE, secretKey);
-        byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(strToDecrypt));
+    public static String decryptString(String value) {
 
-        // Print bytes to verify decryption
-        System.out.println("Decrypted Bytes: " + java.util.Arrays.toString(decryptedBytes));
+        boolean isExist = readAESKeys();
 
-        // Convert the decrypted bytes to String using UTF-8
-        String decryptedString = new String(decryptedBytes, StandardCharsets.UTF_8);
-        return decryptedString;
+        if (isExist) {
+
+            try {
+                // byte[] ivBytes = getHashByte(IV, "MD5");
+                // byte[] keyBytes = getHashByte(KEY, "SHA-256");
+                // byte[] keyBytes = getHashByte(KEY, "MD5");
+
+                byte[] ivBytes = IV.getBytes("UTF-8");
+                byte[] keyBytes = KEY.getBytes("UTF-8");
+
+                Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+                SecretKeySpec secretKeySpec = new SecretKeySpec(keyBytes, "AES");
+                AlgorithmParameterSpec paramSpec = new IvParameterSpec(ivBytes);
+                cipher.init(Cipher.DECRYPT_MODE, secretKeySpec, paramSpec);
+                return new String(cipher.doFinal(Base64.getDecoder().decode(value)), "UTF-8");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return null;
     }
 }

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "AESAlgorithm_Encryption.BurmeseCharacters.Main",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "AESAlgorithm_Encryption.Default_Security.Main",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
             "name": "AESAlgorithm",
             "request": "launch",
             "mainClass": "AESAlgorithm_Encryption.BurmeseCharacters.AESAlgorithm",
