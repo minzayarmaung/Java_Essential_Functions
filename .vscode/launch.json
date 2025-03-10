@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "Main",
+            "projectName": "Java_Essential_Functions_863041db"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "AESAlgorithm_Encryption.BurmeseCharacters.Main",
             "projectName": "Java_Essential_Functions_863041db"
         },
