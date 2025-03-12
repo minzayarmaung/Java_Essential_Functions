@@ -1,0 +1,47 @@
+{
+    "HashMap": {
+      "Order": "No order guarantee",
+      "Performance": "Faster (no ordering overhead)",
+      "IterationOrder": "Random, may change after modifications",
+      "UseCase": "Fast lookups, no need for order",
+      "MemoryUsage": "Less (no extra links for order tracking)",
+      "DuplicateKeys": "Not allowed (overwrites values)",
+      "NullKeysValues": "Allows 1 null key, multiple null values",
+      "BestFor": "Hash-based lookups, large data sets",
+      "Removals": "Order may change unpredictably",
+      "Concurrency": "Not thread-safe (use Collections.synchronizedMap() or ConcurrentHashMap)",
+      "QuickNotes": [
+        "Use HashMap when order does NOT matter",
+        "Faster Performance for lookups",
+        "Best for large datasets"
+      ]
+    },
+    "LinkedHashMap": {
+      "Order": "Maintains insertion order",
+      "Performance": "Slightly slower (due to maintaining order)",
+      "IterationOrder": "Consistent, follows insertion order",
+      "UseCase": "When order matters (e.g., caching, API responses)",
+      "MemoryUsage": "Slightly more (stores order via doubly linked list)",
+      "DuplicateKeys": "Not allowed (overwrites values)",
+      "NullKeysValues": "Allows 1 null key, multiple null values",
+      "BestFor": "Ordered data storage, LRU caches, JSON responses",
+      "Removals": "Maintains relative order after removals",
+      "Concurrency": "Not thread-safe (use Collections.synchronizedMap())",
+      "QuickNotes": [
+        "Use LinkedHashMap when order matters",
+        "Insertion Order is Preserved",
+        "Best for JSON responses and LRU Caching"
+      ]
+    },
+    "UsageRecommendations": {
+      "WhenToUseHashMap": [
+        "Fast lookups without worrying about order",
+        "Large datasets where performance is critical"
+      ],
+      "WhenToUseLinkedHashMap": [
+        "Predictable iteration order is needed",
+        "Preserving the order of elements (e.g., JSON API response, LRU cache)"
+      ]
+    }
+  }
+  

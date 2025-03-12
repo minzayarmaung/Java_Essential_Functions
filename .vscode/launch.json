@@ -1,168 +1,25 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
     "configurations": [
         {
             "type": "java",
-            "name": "Main",
+            "name": "BetterExample",
             "request": "launch",
-            "mainClass": "Main",
-            "projectName": "Java_Essential_Functions_863041db"
+            "mainClass": "BetterExample",
+            "projectName": ""
         },
         {
             "type": "java",
-            "name": "Main",
+            "name": "MapExample",
             "request": "launch",
-            "mainClass": "AESAlgorithm_Encryption.BurmeseCharacters.Main",
-            "projectName": "Java_Essential_Functions_863041db"
+            "mainClass": "MapExample",
+            "projectName": ""
         },
         {
             "type": "java",
-            "name": "Main",
+            "name": "Optional",
             "request": "launch",
-            "mainClass": "AESAlgorithm_Encryption.Default_Security.Main",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "AESAlgorithm",
-            "request": "launch",
-            "mainClass": "AESAlgorithm_Encryption.BurmeseCharacters.AESAlgorithm",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "AESAlgorithm_Encryption.Better_Security.Main",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "Main",
-            "request": "launch",
-            "mainClass": "AESAlgorithm_Encryption.Main",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "Zawgyi2UnicodeConverter",
-            "request": "launch",
-            "mainClass": "ZawgyiToUnicode.Zawgyi2UnicodeConverter",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "EncryptData",
-            "request": "launch",
-            "mainClass": "JavaNativeEncryption.EncryptData",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "UserInput",
-            "request": "launch",
-            "mainClass": "Encryption.UserInput",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "Test",
-            "request": "launch",
-            "mainClass": "ArrayList_Vs_Vector.Test",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "MyanmarFontTranslator",
-            "request": "launch",
-            "mainClass": "Myanmar_Unicode_Translator.MyanmarFontTranslator",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "MathUtils",
-            "request": "launch",
-            "mainClass": "Instance_Vs_Static.DevelopersExample.MathUtils",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "Cars",
-            "request": "launch",
-            "mainClass": "Instance_Vs_Static.BeginnerFriendlyExample.Cars",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "ConsumerDemo",
-            "request": "launch",
-            "mainClass": "UsingConsumer.DiscountProduct.ConsumerDemo",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "ArrayList_Vs_Vector",
-            "request": "launch",
-            "mainClass": "ArrayList_Vs_Vector.ArrayList_Vs_Vector",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "LambdaUsage",
-            "request": "launch",
-            "mainClass": "LambdaUsage",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "type": "java",
-            "name": "checkValidNrc",
-            "request": "launch",
-            "mainClass": "checkValidNrc",
-            "projectName": "Java_Essential_Functions_863041db"
-        },
-        {
-            "name": "Java",
-            "type": "java",
-            "request": "launch",
-            "stopOnEntry": true,
-            "jdkPath": "${env:JAVA_HOME}/bin",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "MyanmarTimeZone.getMyanmarTimeZone",
-            "classpath": [
-                "${workspaceFolder}/bin"
-            ]
-        },
-        {
-            "name": "Java Console App",
-            "type": "java",
-            "request": "launch",
-            "stopOnEntry": true,
-            "jdkPath": "${env:JAVA_HOME}/bin",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "MyanmarTimeZone.getMyanmarTimeZone",
-            "classpath": [
-                "${workspaceFolder}/bin"
-            ],
-            "externalConsole": true
-        },
-        {
-            "type": "java",
-            "name": "Current File",
-            "request": "launch",
-            "mainClass": "${file}"
-        },
-        {
-            "type": "java",
-            "name": "getMyanmarTimeZone",
-            "request": "launch",
-            "mainClass": "MyanmarTimeZone.getMyanmarTimeZone",
-            "projectName": "Java_Essential_Functions_863041db",
-            "classpath": [
-                "${workspaceFolder}/bin"
-            ]
+            "mainClass": "Optional",
+            "projectName": ""
         }
     ]
 }
