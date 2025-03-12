@@ -1,0 +1,29 @@
+{
+    "Spring_MVC_Controller": {
+      "Description": "Traditional Spring web controller used in Spring MVC applications.",
+      "Configuration": "Requires manual setup (XML or Java-based configuration).",
+      "Annotation": "@Controller",
+      "Response_Type": "Returns a view (e.g., JSP, Thymeleaf) using a ViewResolver.",
+      "Usage": "Used for traditional web applications that render HTML views.",
+      "Example": {
+        "code": "@Controller\npublic class MyController {\n    @RequestMapping(\"/hello\")\n    public String hello(Model model) {\n        model.addAttribute(\"message\", \"Hello from Spring MVC\");\n        return \"hello\"; // Refers to a view (e.g., hello.jsp, hello.html)\n    }\n}"
+      }
+    },
+    "Spring_Boot_Controller": {
+      "Description": "Simplified web controller in Spring Boot with built-in configuration.",
+      "Configuration": "Auto-configured with an embedded server (Tomcat, Jetty, etc.).",
+      "Annotation": "@RestController (equivalent to @Controller + @ResponseBody).",
+      "Response_Type": "Returns data directly (JSON, String, etc.) without a ViewResolver.",
+      "Usage": "Used for RESTful APIs and microservices.",
+      "Example": {
+        "code": "@RestController\npublic class MyRestController {\n    @GetMapping(\"/hello\")\n    public String hello() {\n        return \"Hello from Spring Boot\";\n    }\n}"
+      }
+    },
+    "Key_Differences": {
+      "Configuration": "Spring MVC requires manual setup, while Spring Boot auto-configures components.",
+      "Response_Handling": "Spring MVC returns views, while Spring Boot returns data directly.",
+      "View_Resolver": "Needed in Spring MVC but not in Spring Boot.",
+      "Embedded_Server": "Spring MVC requires external servers; Spring Boot has an embedded server."
+    }
+  }
+    
